@@ -1,0 +1,107 @@
+---
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+## Todo #1 Perform calculation, get percentage
+```{r}
+((2018-2014)/(2014-1984)) * 100
+```
+
+## Todo #2 Save answer to variable, erase variable
+```{r}
+percent=((2018-2014)/(2014-1984)) * 100
+rm(percent)
+```
+
+## Todo #3 Sum of numbers
+```{r}
+sum(4,5,8,11)
+```
+
+## Todo #4 Plot 100 random numbers
+```{r}
+plot(rnorm(100))
+```
+
+## Todo #5 Open Manual for Square Root Function
+```{r}
+help(sqrt)
+```
+
+## Todo #6 Make sequence from 31 to 61, then display them as both a row and a matrix P and Q
+```{r}
+p=seq(from=31, to=60, by=1)
+q=matrix(p,ncol=5, nrow=6)
+p
+q
+```
+
+## Todo #7 Create new matrix x1,x2,x3 making a data frame with columns a,b,c. Displaying information
+```{r}
+x1=seq(from=1, to=100, by=1)
+x2=seq(from=101, to=200, by=1)
+x3=seq(from=201, to=300, by=1)
+t= data.frame(a=x1,b=x1+x2,c=x1+x2+x3)
+plot(t)
+```
+
+## Todo #8 Add colors to the graph rgb = red,green,blue. Level of color dependant on number provided
+```{r}
+plot(t$a, type="l", ylim=range(t),lwd=3, col=rgb(1,0,0,0.3))
+lines(t$b, type="s", lwd=2,col=rgb(0.3,0.4,0.3,0.9))
+points(t$c, pch=20, cex=4,col=rgb(0,0,1,0.3))
+```
+
+## Todo #9 Take a Sqaure Root of the mean of 100 random numbers
+```{r}
+sqrt(mean(rnorm(100)))
+```
+
+## Todo #10 Create a file tst1.txt and add information to that file. Change the file by calculating values
+```{r}
+d = data.frame(g = c(3,4,5),h = c(12,43,54))
+write.table(d, file="tst1.txt", row.names=FALSE)
+d2 = read.table(file="tst1.txt",header=TRUE)
+d2$g*5
+```
+
+## Todo #11 Enter Today's date and date of my birthday this year
+```{r}
+date1=strptime( c("20190219","20190815"),format="%Y%m%d")
+present=c(10,6)
+date1
+```
+## Todo #12 Create a for loop that checks i against a number and performs calculations based on the result
+```{r}
+vector=seq(from=1, to=100, by=1)
+s=c()
+for(i in 1:100)
+{
+  if(vector[i]<5)
+  {
+    s[i]=vector[i]*5;
+  }
+  else if(vector[i]>90)
+  {
+    s[i]=vector[i]*10;
+  }
+  else
+  {
+    s[i]=vector[i]*0.1;
+  }
+}
+s
+```
+## Todo #13 create a function that will take in a value i for calculation
+```{r}
+fun= function(arg1,arg2 )
+{
+  vector[i]=arg1[i];
+  for(i in length(vector))
+  {
+    
+  }
+}
+```
